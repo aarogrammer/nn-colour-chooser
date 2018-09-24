@@ -1,0 +1,68 @@
+body {
+    margin: 1em;
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: #1b1b1b;
+    font-weight: bold;
+}
+.flex-grid {
+    display: flex;
+}
+.col {
+    flex: 1;
+}
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    background: #333666;
+    width: 80%;
+    min-height: 200px;
+    font-size: .9em;
+}
+code {
+    font-family: Courier, 'New Courier', monospace;
+    color: white;
+}
+
+#output {
+    border: 0.2em black solid;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+#output > span {
+    position: absolute;
+    font-size: 2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+.pcr-app {
+    z-index: 999;
+}
+.pickr .pcr-button {
+    border: 1px solid #333;
+}
+
+.btn {
+    position: relative;
+    padding: .75em 1.25em;
+    margin: 1em 0;
+    border: 1px solid transparent;
+    border-radius: .25em;
+    cursor: pointer;
+}
+.btn.submit {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.btn.clear {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}

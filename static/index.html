@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>What colour to use</title>
+        <link rel="stylesheet" href="/css/app.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pickr-widget/dist/pickr.min.css" />
+    </head>
+    <body>
+        <div class="flex-grid">
+            <div class="col">
+                <h2>Train application</h2>
+                Pick a colour: <div class="color-picker"></div>
+        
+                <div>
+                    <p>Is the colour you picked light or dark?</p>
+                    <label for="light">Light:</label> <input type="radio" name="color" id="light" checked onclick="lightOrDark(event)"/>
+                    <label for="dark">Dark:</label> <input type="radio" name="color" id="dark" onclick="lightOrDark(event)" />
+                </div>
+            
+                <button class="btn submit" onclick="sendData()">Submit Trained Data</button>
+                <button class="btn clear" onclick="clearData()">Clear dataset</button>
+
+                <h3>Current dataset</h3>
+                <small><a href="/dataset">Read from API</a></small>
+                <div><pre><code id="dataset"></code></pre></div>            
+            </div>
+        
+            <div class="col">
+                <h2>Output:</h2>
+                <div id="output"><span>Some text</span></div>
+                <p>The above box will illustrate what colour of text our neural network should pick.</p>
+                <p>Text not changing colour after adding data? <a href="/">Refresh</a>!</p>
+            </div>
+        </div>
+
+        <!-- Using unpkg to quickly bring in libs from NPM -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/brain.js@1.3.1/browser.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/pickr-widget/dist/pickr.min.js"></script>
+        <script src="/js/app.js"></script>
+    </body>
+</html>

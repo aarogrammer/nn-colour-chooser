@@ -1,0 +1,15 @@
+{
+  "name": "nn-colour-checker",
+  "version": "1.0.0",
+  "description": "Simple Neural Network using Brain.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "author": "Aaron Welsh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
